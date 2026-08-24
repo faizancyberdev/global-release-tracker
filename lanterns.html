@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Lanterns Season 1 global episode release countdown."
+    >
+
+    <title>Lanterns — Global Release Countdown</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <main class="page">
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="header">
+
+            <a
+                href="index.html"
+                class="brand"
+            >
+
+                <span class="brand-dot"></span>
+
+                <span>
+                    Global Release Tracker
+                </span>
+
+            </a>
+
+
+            <div class="status">
+
+                <span class="status-dot"></span>
+
+                Live Countdown
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= BACK ================= -->
+
+        <a
+            href="index.html"
+            class="back-button"
+        >
+            ← Back to shows
+        </a>
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero">
+
+            <div class="show-badge">
+                HBO ORIGINAL
+            </div>
+
+            <h1>
+                Lanterns
+            </h1>
+
+            <p class="subtitle">
+                Season 1 · 8 Episodes
+            </p>
+
+            <p class="description">
+                Find out exactly when each episode becomes available
+                in your local time.
+            </p>
+
+        </section>
+
+
+        <!-- ================= CONTROLS ================= -->
+
+        <section class="controls-card">
+
+            <!-- Episode -->
+
+            <div class="control-group">
+
+                <label for="episodeSelect">
+                    Episode
+                </label>
+
+                <select id="episodeSelect"></select>
+
+            </div>
+
+
+            <!-- Timezone -->
+
+            <div class="control-group">
+
+                <label for="timezoneSelect">
+                    Timezone
+                </label>
+
+                <select id="timezoneSelect">
+
+                    <option value="auto">
+                        Auto — Detect my timezone
+                    </option>
+
+                    <optgroup label="Popular Timezones">
+
+                        <option value="Asia/Karachi">
+                            Pakistan — Karachi
+                        </option>
+
+                        <option value="Asia/Dubai">
+                            UAE — Dubai
+                        </option>
+
+                        <option value="America/New_York">
+                            US — New York
+                        </option>
+
+                        <option value="America/Los_Angeles">
+                            US — Los Angeles
+                        </option>
+
+                        <option value="Europe/London">
+                            UK — London
+                        </option>
+
+                        <option value="Asia/Kolkata">
+                            India — Kolkata
+                        </option>
+
+                        <option value="America/Sao_Paulo">
+                            Brazil — São Paulo
+                        </option>
+
+                        <option value="Asia/Tokyo">
+                            Japan — Tokyo
+                        </option>
+
+                        <option value="Australia/Sydney">
+                            Australia — Sydney
+                        </option>
+
+                        <option value="Asia/Singapore">
+                            Singapore
+                        </option>
+
+                    </optgroup>
+
+                </select>
+
+                <button
+                    id="resetTimezone"
+                    class="reset-timezone"
+                    type="button"
+                >
+                    Use my timezone
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EPISODE ================= -->
+
+        <section class="episode-section">
+
+            <div class="episode-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        SELECTED EPISODE
+                    </p>
+
+                    <h2 id="episodeTitle">
+                        Episode 3
+                    </h2>
+
+                    <p
+                        id="officialEpisodeTitle"
+                        class="official-episode-title"
+                    ></p>
+
+                </div>
+
+
+                <div
+                    id="episodeNumber"
+                    class="episode-number"
+                >
+                    03
+                </div>
+
+            </div>
+
+
+            <!-- ================= COUNTDOWN ================= -->
+
+            <div class="countdown-section">
+
+                <p class="countdown-label">
+                    TIME REMAINING
+                </p>
+
+
+                <div class="countdown">
+
+                    <div class="countdown-unit">
+
+                        <span id="weeks">
+                            00
+                        </span>
+
+                        <small>
+                            WEEKS
+                        </small>
+
+                    </div>
+
+
+                    <div class="separator">
+                        :
+                    </div>
+
+
+                    <div class="countdown-unit">
+
+                        <span id="days">
+                            00
+                        </span>
+
+                        <small>
+                            DAYS
+                        </small>
+
+                    </div>
+
+
+                    <div class="separator">
+                        :
+                    </div>
+
+
+                    <div class="countdown-unit">
+
+                        <span id="hours">
+                            00
+                        </span>
+
+                        <small>
+                            HOURS
+                        </small>
+
+                    </div>
+
+
+                    <div class="separator">
+                        :
+                    </div>
+
+
+                    <div class="countdown-unit">
+
+                        <span id="minutes">
+                            00
+                        </span>
+
+                        <small>
+                            MINUTES
+                        </small>
+
+                    </div>
+
+
+                    <div class="separator">
+                        :
+                    </div>
+
+
+                    <div class="countdown-unit seconds-unit">
+
+                        <span id="seconds">
+                            00
+                        </span>
+
+                        <small>
+                            SECONDS
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="availableMessage"
+                    class="available-message"
+                >
+                    NOW AVAILABLE
+                </div>
+
+            </div>
+
+
+            <!-- ================= RELEASE TIME ================= -->
+
+            <div class="release-card">
+
+                <div class="release-label">
+                    RELEASES IN YOUR TIMEZONE
+                </div>
+
+                <div
+                    id="releaseDate"
+                    class="release-date"
+                >
+                    —
+                </div>
+
+                <div
+                    id="releaseTime"
+                    class="release-time"
+                >
+                    —
+                </div>
+
+                <div
+                    id="timezoneLabel"
+                    class="timezone-label"
+                >
+                    —
+                </div>
+
+            </div>
+
+
+            <!-- ================= TECHNICAL INFO ================= -->
+
+            <div class="technical-info">
+
+                <div>
+
+                    <span>
+                        Universal release moment
+                    </span>
+
+                    <strong id="utcRelease">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Detected browser timezone
+                    </span>
+
+                    <strong id="detectedTimezone">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer>
+
+            <p>
+                Release schedule based on the official release schedule.
+            </p>
+
+            <p>
+                Timezone conversion is handled locally by your browser.
+            </p>
+
+            <span>
+                No account · No database · No API required
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
