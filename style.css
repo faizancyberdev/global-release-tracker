@@ -1268,3 +1268,9 @@ footer span {
     }
 
 }
+
+.copyright {
+    margin-top: 10px;
+    color: #9299a8;
+    font-weight: 600;
+}
